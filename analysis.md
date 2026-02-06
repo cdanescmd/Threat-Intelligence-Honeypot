@@ -13,7 +13,7 @@ The Cowrie sensor captured active terminal sessions.
 
 <table>
   <tr>
-    <td><img src="/.assets/cowrie_username_attempts.PNG" width="500"></td>
+    <td><img src="/assets/cowrie_username_attempts.PNG" width="500"></td>
     <td><img src="./assets/cowrie_password_attempts.PNG" width="500"></td>
   </tr>
 </table>

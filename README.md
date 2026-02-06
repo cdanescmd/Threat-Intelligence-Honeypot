@@ -1,4 +1,4 @@
-# 🚧Threat Intelligence Honeypot🚧
+# Threat Intelligence Honeypot
 ## Project Overview
 A containerized honeypot deployment hosted on Vultr using Ubuntu server. This project demonstrates the orchestration of multiple security sensors to capture, analyze, and visualize global threat actor behavior in real-time.
 ## System Architecture

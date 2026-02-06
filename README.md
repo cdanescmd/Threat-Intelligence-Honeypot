@@ -21,7 +21,7 @@ To maintain a secure posture and protect the underlying infrastructure, the foll
 - Container Isolation: All honeypot services (Cowrie, Dionaea, etc.) run in isolated Docker containers, preventing attackers from interacting with the Ubuntu host system.
 - Data Anonymization: In compliance with security best practices, all Network Layer identifiers (IPs) haven been abstracted in this documentation to focus on behavioral threat patterns.
 
-<img src="./assets/honeypot_dashboard.png" width="1000"/>
+<img src="./assets/honeypot_dashboard.PNG" width="1000"/>
 
 ## Honeypot Sensor Catalog
 - Cowrie (SSH/Telnet): Captured brute-force attempts and logged attacker command.

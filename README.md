@@ -22,6 +22,7 @@ To maintain a secure posture and protect the underlying infrastructure, the foll
 - Data Anonymization: In compliance with security best practices, all Network Layer identifiers (IPs) haven been abstracted in this documentation to focus on behavioral threat patterns.
 
 <img src="./assets/honeypot_dashboard.PNG" width="1000"/>
+<img src="./assets/honeypot_dashboard_2.PNG" width="1000"/>
 
 ## Honeypot Sensor Catalog
 - Cowrie (SSH/Telnet): Captured brute-force attempts and logged attacker command.
@@ -33,7 +34,7 @@ To maintain a secure posture and protect the underlying infrastructure, the foll
 Over the course of the deployment, the sensors captured 175,000+ total attacks, revealing a high-intensity environment of automated scanning and exploitation attempts.
 | Metric | Findings	| Key Insight |
 | ------------- | ------------- | ------------- |
-Total Telemetry	| 175,000 Attacks	| Average of ~2 hits per second across all containers.
+Total Telemetry	| 177,000+ Attacks	| Average of ~2 hits per second across all containers.
 | Top Country| Netherlands (57%)|	Significant traffic from European-based VPS/Hosting providers.
 | Primary OS	| Windows NT (64%)| Attackers are heavily prioritizing SMB/RDP vulnerabilities.
 | Top Sensor	| Honeytrap (131k)| Captures the "background radiation" of port-scanning botnets.

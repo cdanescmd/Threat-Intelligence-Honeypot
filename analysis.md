@@ -9,11 +9,14 @@ Technique: Syn-scanning and version grabbing.
 Observation: Attackers frequently used Zgrab and Masscan user agents to identify services before attempting authentication.
 
 ## Phase 2: Brute Force & Credential Stuffing (Cowrie)
-
-<img src="./assets/cowrie_username_attempts.PNG" width="1000"/>
-<img src="./assets/cowrie_password_attempts.PNG" width="1000"/>
-
 The Cowrie sensor captured active terminal sessions.
+
+<table>
+  <tr>
+    <td><img src="/.assets/cowrie_username_attempts.PNG" width="500"></td>
+    <td><img src="./assets/cowrie_password_attempts.PNG" width="500"></td>
+  </tr>
+</table>
 
 ### Top Credentials: 
 

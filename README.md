@@ -8,11 +8,12 @@ A containerized honeypot deployment hosted on Vultr using Ubuntu server. This pr
 
 | Component | Specification |
 | ------------- | ------------- |
-| Cloud Provider  | Vultr (High-Performance Compute)  |
+| Cloud Provider  | Vultr (High-Performance Compute) |
 | Host  | Ubuntu 22.04 LTS  |
 | Container Engine | Docker & Docker Compose |
-Firewall | Vultr Stateless Network Firewall
-Analytics | ELK Stack (Elasticsearch, Logstash, Kibana)
+| Firewall | Vultr Stateless Network Firewall |
+| Analytics | ELK Stack (Elasticsearch, Logstash, Kibana) |
+
 ## Security & OPSEC Posture
 To maintain a secure posture and protect the underlying infrastructure, the following controls were implemented:
 - Default-Deny Firewall: All ports are closed by default. Only specific honeypot "bait" ports are open to the public.
@@ -20,10 +21,12 @@ To maintain a secure posture and protect the underlying infrastructure, the foll
 - Container Isolation: All honeypot services (Cowrie, Dionaea, etc.) run in isolated Docker containers, preventing attackers from interacting with the Ubuntu host system.
 - Data Anonymization: In compliance with security best practices, all Network Layer identifiers (IPs) haven been abstracted in this documentation to focus on behavioral threat patterns.
 
+<img src="./assets/honeypot_dashboard.png" width="1000"/>
+
 ## Honeypot Sensor Catalog
-Cowrie (SSH/Telnet): Captured brute-force attempts and logged attacker command.
-Dionaea: Intercepted network-wide malware propagation attempts (SMB/MSSQL).
-Suricata: Provided signature-based Intrustion Detection (IDS) for all incoming traffic.
+- Cowrie (SSH/Telnet): Captured brute-force attempts and logged attacker command.
+- Dionaea: Intercepted network-wide malware propagation attempts (SMB/MSSQL).
+- Suricata: Provided signature-based Intrustion Detection (IDS) for all incoming traffic.
 
 ## Executive Summary: Threat Intelligence Findings
 

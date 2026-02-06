@@ -39,6 +39,6 @@ Over the course of the deployment, the sensors captured 175,000+ total attacks, 
 Total Telemetry	| 177,000+ Attacks	| Average of ~2 hits per second across all containers.
 | Top Country| Netherlands (57%)|	Significant traffic from European-based VPS/Hosting providers.
 | Primary OS	| Windows NT (64%)| Attackers are heavily prioritizing SMB/RDP vulnerabilities.
-| Top Sensor	| Honeytrap (131k)| Captures the "background radiation" of port-scanning botnets.
+| Top Sensor	| Honeytrap (133k)| Captures the "background radiation" of port-scanning botnets.
 
     Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the Technical Analysis Report (analysis.md).

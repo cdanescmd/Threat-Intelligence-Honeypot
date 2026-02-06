@@ -24,3 +24,15 @@ To maintain a secure posture and protect the underlying infrastructure, the foll
 Cowrie (SSH/Telnet): Captured brute-force attempts and logged attacker command.
 Dionaea: Intercepted network-wide malware propagation attempts (SMB/MSSQL).
 Suricata: Provided signature-based Intrustion Detection (IDS) for all incoming traffic.
+
+## Executive Summary: Threat Intelligence Findings
+
+Over the course of the deployment, the sensors captured 175,000+ total attacks, revealing a high-intensity environment of automated scanning and exploitation attempts.
+| Metric | Findings	| Key Insight |
+| ------------- | ------------- | ------------- |
+Total Telemetry	| 175,000 Attacks	| Average of ~2 hits per second across all containers.
+| Top Country| Netherlands (57%)|	Significant traffic from European-based VPS/Hosting providers.
+| Primary OS	| Windows NT (64%)| Attackers are heavily prioritizing SMB/RDP vulnerabilities.
+| Top Sensor	| Honeytrap (131k)| Captures the "background radiation" of port-scanning botnets.
+
+    Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the Technical Analysis Report (analysis.md).

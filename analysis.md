@@ -10,6 +10,9 @@ Observation: Attackers frequently used Zgrab and Masscan user agents to identify
 
 ## Phase 2: Brute Force & Credential Stuffing (Cowrie)
 
+<img src="./assets/cowrie_username_attempts.PNG" width="1000"/>
+<img src="./assets/cowrie_password_attempts.PNG" width="1000"/>
+
 The Cowrie sensor captured active terminal sessions.
 
 ### Top Credentials: 
@@ -23,6 +26,8 @@ Post-Auth Behavior: 82% of successful logins immediately attempted to run wget o
 # 2. Protocol-Specific Findings
 
 The deployment targeted diverse protocols to map out different threat actor motivations.
+
+<img src="./assets/attacks_by_port.PNG" width="1000"/>
 
 | Protocol | Primary Sensor	| Notable Activity |
 | ---------------------- | -------------- |-------------- |
@@ -40,6 +45,8 @@ Significant Alert Categories:
 - ET POLICY Reserved Internal IP Spaced Leak: Identified attackers attempting to use the honeypot as a proxy to scan internal network ranges.
 
 # 4. Geographic & Infrastructure Attribution
+
+<img src="./assets/tpot_attack_map.PNG" width="1000"/>
 
 A significant portion of the traffic (57%) originated from The Netherlands.
 

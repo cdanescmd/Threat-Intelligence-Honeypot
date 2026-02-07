@@ -41,4 +41,4 @@ Total Telemetry	| 177,000+ Attacks	| Average of ~2 hits per second across all co
 | Primary OS	| Windows NT (64%)| Attackers are heavily prioritizing SMB/RDP vulnerabilities.
 | Top Sensor	| Honeytrap (133k)| Captures the "background radiation" of port-scanning botnets.
 
-    Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the Technical Analysis Report (analysis.md).
+##### Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the Technical Analysis Report (analysis.md).

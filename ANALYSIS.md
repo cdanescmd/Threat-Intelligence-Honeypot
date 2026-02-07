@@ -26,17 +26,19 @@ The Cowrie sensor captured active terminal sessions.
 
 Post-Auth Behavior: 82% of successful logins immediately attempted to run wget or curl to pull down a shell script (sh) from a remote C2 (Command & Control) server.
 
-# 2. Protocol-Specific Findings
+# 2. Protocol-Specific Findings & Geographic Correlation
 
-The deployment targeted diverse protocols to map out different threat actor motivations.
+The deployment revealed distinct regional patterns, suggesting that certain botnets or threat actor groups operate out of specific geographic infrastructure to target specific vulnerabilities.
 
 <img src="./assets/attacks_by_port.PNG" width="1000"/>
 
-| Protocol | Primary Sensor	| Notable Activity |
-| ---------------------- | -------------- |-------------- |
-| SMB (445) | Dionaea | High volume of WannaCry/EternalBlue style exploits. Automated probes seeking unpatched Windows instances.|
-| SSH (22) | Cowrie	| Persistent brute-force. Most sessions lasted < 30 seconds, indicating scripted payload delivery.|
-| SIP (5060 ) | Honeytrap | Significant VoIP scanning, likely looking for open relays to commit toll fraud.|
+Origin Country | Protocol | Primary Motivation |
+| ------------ | -------------- |------------- |
+| Netherlands | 22, 9100 | Infrastructure & Printing: Heavy SSH brute-forcing combined with PDL (Printer Description Language) probes on 9100.|
+| Ukraine | 445, 25 | Exploitation & Spam: High-frequency SMB (EternalBlue) probing and SMTP (Email) scanning for open relays. |
+| United States | 5901, 8728, 5925, 22 | Remote Management: Aggressive targeting of VNC (5901) and MikroTik WinBox (8728), indicating a focus on network hardware.|
+| Romania | 22 | Credential Stuffing: Dedicated SSH brute-force campaigns. |
+| Hong Kong | 5060 | VoIP Exploitation: Focused SIP scanning aimed at telecommunications fraud. |
 
 # 3. Network Intrusion Detection (Suricata)
 

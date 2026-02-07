@@ -41,13 +41,24 @@ Origin Country | Protocol | Primary Motivation |
 | Hong Kong | 5060 | VoIP Exploitation: Focused SIP scanning aimed at telecommunications fraud. |
 
 # 3. Network Intrusion Detection (Suricata)
+While the honeypot sensors (Cowrie/Dionaea) captured what happened after a connection was made, Suricata provided the "eyes" on the wire, identifying the nature of the traffic before it even reached the applications.
+Network Layer Anomalies (The "Noise")
 
-Suricata provided the "eyes" on the wire, identifying malicious signatures within the traffic stream.
-Significant Alert Categories:
+Over 70% of all alerts were categorized as packet anomalies, which is a hallmark of industrial-scale scanning:
 
-- ET SCAN Potential SSH Scan: Triggered by high-frequency connection attempts from single IPs (primarily out of hosting providers in the Netherlands).
-- ET EXPLOIT Possible ETERNALBLUE: Detected numerous attempts to exploit MS17-010.
-- ET POLICY Reserved Internal IP Spaced Leak: Identified attackers attempting to use the honeypot as a proxy to scan internal network ranges.
+- SURICATA IPv4/AF-PACKET Truncated Packets: These accounted for the vast majority of telemetry. This indicates the use of aggressive, high-speed scanning tools (like Masscan) that send incomplete packets to map the attack surface without completing a full TCP handshake.
+
+- Interpretation: This suggests the honeypot is situated in a high-activity "network neighborhood" where automated botnets are constantly performing horizontal reconnaissance.
+
+### Significant Behavioral Alerts (The "Intent")
+
+Beyond the background noise, Suricata identified high-confidence signatures of active exploitation:
+
+<img src="./assets/suricata_top_10.PNG" width="1000"/>
+
+- ET INFO SSH Session in Progress (Top 3 Alert): This signature marks the transition from "scanning" to "interacting." It confirms that actors (primarily from Romania, the U.S., and the Netherlands) moved past initial probes to establish active TCP sessions to brute-force credentials.
+- ET EXPLOIT Possible ETERNALBLUE (MS17-010): A high frequency of alerts targeting Port 445. These were primarily correlated with traffic from Ukraine, showing a persistent effort to propagate legacy SMB malware.
+- ET POLICY Reserved Internal IP Space Leak: Detected instances where attackers attempted to use the honeypot as a "pivot point." By sending traffic destined for internal ranges (10.0.0.0/8, etc.), attackers were testing if the host could be used as an open proxy to scan Vultr's internal infrastructure.
 
 # 4. Geographic & Infrastructure Attribution
 

@@ -53,7 +53,7 @@ Significant Alert Categories:
 
 A significant portion of the traffic (57%) originated from The Netherlands.
 
-    Analyst Note: This does not necessarily mean the attackers are physically in the Netherlands. This spike is attributed to high-density VPS (Virtual Private Server) providers located there. Threat actors lease these low-cost, high-bandwidth servers to launch automated botnets while masking their true origin.
+##### Analyst Note: This does not necessarily mean the attackers are physically in the Netherlands. This spike is attributed to high-density VPS (Virtual Private Server) providers located there. Threat actors lease these low-cost, high-bandwidth servers to launch automated botnets while masking their true origin.
 
 # 5. Security Recommendations & Mitigation
 

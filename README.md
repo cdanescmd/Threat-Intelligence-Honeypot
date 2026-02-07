@@ -41,4 +41,10 @@ Total Telemetry	| 177,000+ Attacks	| Average of ~2 hits per second across all co
 | Primary OS	| Windows NT (64%)| Attackers are heavily prioritizing SMB/RDP vulnerabilities.
 | Top Sensor	| Honeytrap (133k)| Captures the "background radiation" of port-scanning botnets.
 
-##### Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the Technical Analysis Report (analysis.md).
+### Deployment Workflow
+1. **Infrastructure:** Provisioned Ubuntu 22.04 on Vultr with a Stateless Firewall (Default-Deny).
+2. **Hardening:** Executed PowerShell scripts to provision non-root sudo users and group-based access control.
+3. **Installation:** Deployed T-Pot via automated script, configuring Nginx for secure HTTPS remote management.
+4. **Networking:** Established a VPN for secure administrative access to the ELK stack, bypassing public-facing management ports.
+
+##### Note: For a comprehensive technical deep dive into the Suricata alerts, protocol fuzzing, and specific malware delivery patterns, please refer to the [Technical Analysis Report](ANALYSIS.md).
